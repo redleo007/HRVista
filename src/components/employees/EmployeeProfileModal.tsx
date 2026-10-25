@@ -83,7 +83,7 @@ export const EmployeeProfileModal: React.FC<EmployeeProfileModalProps> = ({
           </button>
           
           <div className="flex items-center gap-2 text-xs font-mono text-[#D4AF37]">
-            <span>NEXORA Personnel ID: {employee.employeeId}</span>
+            <span>HRVISTA Personnel ID: {employee.employeeId}</span>
             <span>·</span>
             <span>{employee.department}</span>
           </div>
@@ -385,7 +385,7 @@ export const EmployeeProfileModal: React.FC<EmployeeProfileModalProps> = ({
 
         {/* Footer */}
         <div className="px-6 py-3 border-t border-[#212833] bg-[#11161D] flex items-center justify-between text-xs text-[#98A2B3]">
-          <span>NEXORA HR Platform · Verified Profile</span>
+          <span>HRVISTA Platform · Verified Profile</span>
           <button
             onClick={onClose}
             className="px-4 py-1.5 text-xs font-semibold text-[#F5F7FA] bg-[#151B23] hover:bg-[#1A222C] border border-[#212833] rounded-lg transition-colors cursor-pointer"

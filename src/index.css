@@ -1,28 +1,69 @@
 @import "tailwindcss";
 
+:root {
+  color-scheme: light;
+  --hrvista-ink: #172554;
+  --hrvista-muted: #68708A;
+  --hrvista-purple: #6D28D9;
+  --hrvista-border: #E1E4EE;
+}
+
 @layer base {
   body {
-    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #0B0F14;
-    color: #F5F7FA;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    background-color: #F7F8FC;
+    color: var(--hrvista-ink);
+  }
+
+  button, input, select, textarea {
+    font: inherit;
+  }
+
+  button:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible {
+    outline: 2px solid #7C3AED;
+    outline-offset: 2px;
   }
   code, pre, .font-mono {
     font-family: 'JetBrains Mono', monospace;
   }
   
-  /* Luxury subtle dark scrollbar */
+  /* Keep long data tables quiet while preserving the light workspace. */
   ::-webkit-scrollbar {
     width: 6px;
     height: 6px;
   }
   ::-webkit-scrollbar-track {
-    background: #0B0F14;
+    background: #F7F8FC;
   }
   ::-webkit-scrollbar-thumb {
-    background: #212833;
+    background: #D7DBE8;
     border-radius: 9999px;
   }
   ::-webkit-scrollbar-thumb:hover {
-    background: #2E3846;
+    background: #AEB6CA;
   }
 }
+
+/* Existing views share a compact token vocabulary. Re-map it to the HRVISTA
+   light theme in one place so the product stays visually consistent. */
+[class*="bg-[#0B0F14]"] { background-color: #F7F8FC !important; }
+[class*="bg-[#0E131A]"] { background-color: #FFFFFF !important; }
+[class*="bg-[#11161D]"] { background-color: #F4F5FA !important; }
+[class*="bg-[#151B23]"] { background-color: #FFFFFF !important; }
+[class*="bg-[#1A222C]"] { background-color: #EEF0F8 !important; }
+[class*="text-[#0B0F14]"] { color: #FFFFFF !important; }
+[class*="text-[#F5F7FA]"] { color: #172554 !important; }
+[class*="text-[#98A2B3]"] { color: #68708A !important; }
+[class*="text-[#D4AF37]"] { color: #6D28D9 !important; }
+[class*="text-[#E8C96A]"] { color: #7C3AED !important; }
+[class*="border-[#212833]"] { border-color: #E1E4EE !important; }
+[class*="border-[#D4AF37]"] { border-color: #8B5CF6 !important; }
+[class*="ring-[#D4AF37]"] { --tw-ring-color: #8B5CF6 !important; }
+[class*="shadow-[#D4AF37]"] { --tw-shadow-color: #8B5CF6 !important; }
+[class*="bg-[#D4AF37]"] { background-color: #6D28D9 !important; }
+[class*="bg-[#E8C96A]"] { background-color: #8B5CF6 !important; }
+[class*="from-[#E8C96A]"] { --tw-gradient-from: #8B5CF6 !important; }
+[class*="via-[#D4AF37]"] { --tw-gradient-via: #6D28D9 !important; }
+[class*="to-[#997B20]"] { --tw-gradient-to: #172554 !important; }
+[class*="bg-emerald-600"] { background-color: #16A34A !important; }
+[class*="hover:bg-emerald-500"]:hover { background-color: #15803D !important; }

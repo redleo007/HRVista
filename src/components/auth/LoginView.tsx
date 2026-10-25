@@ -12,6 +12,7 @@ import {
   Building2,
   Check
 } from 'lucide-react';
+import { BrandLogo } from '../common/BrandLogo';
 
 export const LoginView: React.FC = () => {
   const { login } = useHR();
@@ -42,18 +43,13 @@ export const LoginView: React.FC = () => {
       <div className="max-w-md w-full bg-[#151B23] rounded-2xl border border-[#212833] shadow-2xl overflow-hidden relative z-10 animate-in fade-in zoom-in-95 duration-200">
         {/* Brand Banner */}
         <div className="p-8 text-center pb-6 border-b border-[#212833] bg-[#11161D]/70">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#E8C96A] via-[#D4AF37] to-[#997B20] text-[#0B0F14] font-black text-xl flex items-center justify-center mx-auto mb-3 shadow-lg shadow-[#D4AF37]/20">
-            N
-          </div>
-          <h1 className="text-xl font-extrabold tracking-wider text-[#F5F7FA]">
-            NEXORA <span className="text-[#D4AF37]">HR</span>
-          </h1>
+          <BrandLogo className="justify-center" />
           <p className="text-xs text-[#98A2B3] mt-1 font-mono uppercase tracking-widest">
             Enterprise Workforce Platform
           </p>
           <div className="text-[11px] text-[#E8C96A] mt-2 font-mono flex items-center justify-center gap-1.5">
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
-            <span>GE3791 Principles of Management</span>
+            <span>Principles of Management Mini Project</span>
           </div>
         </div>
 

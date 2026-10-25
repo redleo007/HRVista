@@ -116,7 +116,7 @@ export const HRProvider: React.FC<{ children: React.ReactNode }> = ({ children }
   const [currentUser, setCurrentUser] = useState<UserProfile>(() => 
     INITIAL_USERS[currentRole] || INITIAL_USERS.Admin
   );
-  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(true);
+  const [isAuthenticated, setIsAuthenticated] = useState<boolean>(false);
   const [activeTab, setActiveTab] = useState<string>('dashboard');
   const [isOfflineSyncMode] = useState<boolean>(true);
 

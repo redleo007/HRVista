@@ -18,6 +18,7 @@ import {
   CheckCircle2,
   AlertCircle
 } from 'lucide-react';
+import { BrandLogo } from '../common/BrandLogo';
 
 interface SidebarProps {
   isCollapsed?: boolean;
@@ -64,30 +65,17 @@ export const Sidebar: React.FC<SidebarProps> = () => {
 
   return (
     <aside
-      className={`bg-[#0E131A] border-r border-[#212833] flex flex-col shrink-0 h-[calc(100vh-3.5rem)] sticky top-14 select-none transition-all duration-200 z-20 ${
+      className={`bg-white border-r border-slate-200 flex flex-col shrink-0 h-[calc(100vh-3.5rem)] sticky top-14 select-none transition-all duration-200 z-20 ${
         isCollapsed ? 'w-20' : 'w-64'
       }`}
     >
-      {/* Sidebar Header Brand: NEXORA HR */}
-      <div className="h-16 px-4 border-b border-[#212833] flex items-center justify-between">
+      {/* Sidebar Header Brand: HRVISTA */}
+      <div className="h-16 px-4 border-b border-slate-200 flex items-center justify-between">
         <div
           onClick={() => setActiveTab('dashboard')}
           className="flex items-center gap-2.5 cursor-pointer group overflow-hidden"
         >
-          {/* Gold Gem Insignia */}
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#E8C96A] via-[#D4AF37] to-[#997B20] text-[#0B0F14] font-black text-sm flex items-center justify-center shrink-0 shadow-sm shadow-[#D4AF37]/20 group-hover:scale-105 transition-transform">
-            N
-          </div>
-          {!isCollapsed && (
-            <div className="flex flex-col">
-              <span className="text-sm font-extrabold tracking-wider text-[#F5F7FA] font-sans">
-                NEXORA <span className="text-[#D4AF37]">HR</span>
-              </span>
-              <span className="text-[10px] text-[#98A2B3] tracking-widest uppercase font-mono">
-                Enterprise
-              </span>
-            </div>
-          )}
+          <BrandLogo compact={isCollapsed} className="group-hover:scale-[1.02] transition-transform" />
         </div>
 
         {/* Collapse toggle button */}
@@ -103,7 +91,7 @@ export const Sidebar: React.FC<SidebarProps> = () => {
       {/* Navigation List */}
       <div className="flex-1 overflow-y-auto px-2.5 py-3 space-y-1">
         {!isCollapsed && (
-          <div className="px-2 pb-1.5 text-[10px] font-bold text-[#98A2B3]/70 uppercase tracking-widest font-mono">
+          <div className="px-2 pb-1.5 text-[11px] font-bold text-slate-500 uppercase tracking-widest">
             Platform Modules
           </div>
         )}
@@ -122,21 +110,21 @@ export const Sidebar: React.FC<SidebarProps> = () => {
                     isCollapsed ? 'justify-center p-2.5' : 'justify-between px-3 py-2'
                   } rounded-lg text-xs font-semibold transition-all cursor-pointer relative ${
                     isActive
-                      ? 'bg-[#D4AF37] text-[#0B0F14] shadow-sm shadow-[#D4AF37]/20 font-bold'
-                      : 'bg-[#D4AF37]/10 text-[#E8C96A] hover:bg-[#D4AF37]/15 border border-[#D4AF37]/30'
+                      ? 'bg-violet-700 text-white shadow-sm font-bold'
+                      : 'bg-violet-50 text-violet-700 hover:bg-violet-100 border border-violet-200'
                   }`}
                 >
                   <div className="flex items-center gap-2.5 min-w-0">
-                    <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-[#0B0F14]' : 'text-[#D4AF37]'}`} />
-                    {!isCollapsed && <span className="truncate">{item.label}</span>}
+                    <Icon className={`w-4 h-4 shrink-0 ${isActive ? 'text-white' : 'text-violet-700'}`} />
+                    {!isCollapsed && <span className="whitespace-normal leading-5">{item.label}</span>}
                   </div>
                   {!isCollapsed && (
                     <span
-                      className={`text-[9px] px-1.5 py-0.5 rounded font-mono uppercase tracking-wider ${
-                        isActive ? 'bg-[#0B0F14]/20 text-[#0B0F14]' : 'bg-[#D4AF37]/20 text-[#E8C96A]'
+                      className={`text-[9px] px-1.5 py-0.5 rounded font-mono font-bold uppercase tracking-wider ${
+                        isActive ? 'bg-white/20 text-white' : 'bg-violet-100 text-violet-700 border border-violet-200'
                       }`}
                     >
-                      GE3791
+                      Academic
                     </span>
                   )}
                 </button>
@@ -152,9 +140,9 @@ export const Sidebar: React.FC<SidebarProps> = () => {
               className={`w-full flex items-center ${
                 isCollapsed ? 'justify-center p-2.5' : 'justify-between px-3 py-2'
               } rounded-lg text-xs font-medium transition-all duration-150 cursor-pointer relative group ${
-                isActive
-                  ? 'bg-[#151B23] text-[#F5F7FA] font-semibold border-l-2 border-[#D4AF37] shadow-sm'
-                  : 'text-[#98A2B3] hover:text-[#F5F7FA] hover:bg-[#151B23]/60'
+                  isActive
+                  ? 'bg-violet-50 text-violet-900 font-semibold border-l-2 border-violet-700'
+                  : 'text-slate-600 hover:text-[#172554] hover:bg-slate-50'
               }`}
             >
               <div className="flex items-center gap-2.5 min-w-0">
@@ -163,7 +151,7 @@ export const Sidebar: React.FC<SidebarProps> = () => {
                     isActive ? 'text-[#D4AF37]' : 'text-[#98A2B3] group-hover:text-[#F5F7FA]'
                   }`}
                 />
-                {!isCollapsed && <span className="truncate">{item.label}</span>}
+                {!isCollapsed && <span className="whitespace-normal leading-5">{item.label}</span>}
               </div>
 
               {!isCollapsed && item.badge && (
@@ -181,7 +169,7 @@ export const Sidebar: React.FC<SidebarProps> = () => {
       </div>
 
       {/* Bottom Area: Digital Punch Terminal Widget */}
-      <div className="p-2.5 border-t border-[#212833] bg-[#0B0F14]/60">
+      <div className="p-2.5 border-t border-slate-200 bg-slate-50">
         {!isCollapsed ? (
           <div className="bg-[#151B23] p-3 rounded-xl border border-[#212833] shadow-inner space-y-2">
             <div className="flex items-center justify-between text-xs">

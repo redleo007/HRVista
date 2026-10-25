@@ -162,7 +162,7 @@ export const SettingsView: React.FC = () => {
         <div className="bg-[#151B23] rounded-xl border border-[#212833] p-6 shadow-sm space-y-4">
           <div className="pb-3 border-b border-[#212833]">
             <h3 className="text-sm font-bold text-[#F5F7FA]">Role-Based Access Control (RBAC) Matrix</h3>
-            <p className="text-xs text-[#98A2B3]">Privilege boundaries enforced by NEXORA security engine</p>
+            <p className="text-xs text-[#98A2B3]">Privilege boundaries enforced by HRVISTA security engine</p>
           </div>
 
           <div className="space-y-3">

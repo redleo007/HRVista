@@ -62,7 +62,7 @@ const AppContent: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#0B0F14] flex flex-col text-[#F5F7FA]">
+    <div className="min-h-screen bg-[#F7F8FC] flex flex-col text-[#172554]">
       {/* Top Navbar */}
       <Header onToggleSidebar={() => setMobileSidebarOpen(!mobileSidebarOpen)} />
 
@@ -98,16 +98,16 @@ const AppContent: React.FC = () => {
         )}
 
         {/* Main Content Area */}
-        <main className="flex-1 p-4 md:p-6 lg:p-8 max-w-7xl mx-auto w-full overflow-y-auto">
+        <main className="flex-1 p-4 md:p-7 lg:p-8 max-w-[1600px] mx-auto w-full overflow-y-auto">
           {renderActiveView()}
 
           {/* Academic Footer */}
           <footer className="mt-14 pt-6 border-t border-[#212833] text-center text-xs text-[#98A2B3] pb-8">
             <div className="font-semibold text-[#F5F7FA] tracking-wide">
-              NEXORA HR — Enterprise Human Resource Intelligence System
+              HRVISTA — Smart Human Resource Management System
             </div>
             <div className="text-[11px] text-[#98A2B3] mt-1 font-mono">
-              College Mini Project · Principles of Management (GE3791 / Regulation 2021) · Topic: Impact of Technology on HRM
+              College Mini Project · Principles of Management · Topic: Impact of Technology on HRM
             </div>
           </footer>
         </main>

@@ -61,37 +61,37 @@ export const Header: React.FC<HeaderProps> = () => {
 
   return (
     <>
-      <header className="h-14 bg-[#11161D] border-b border-[#212833] px-4 md:px-6 flex items-center justify-between sticky top-0 z-30 select-none">
+      <header className="h-14 min-w-0 overflow-hidden bg-[#11161D] border-b border-[#212833] px-3 sm:px-4 md:px-6 flex items-center gap-2 sticky top-0 z-30 select-none">
         {/* Left Zone: Organization context & Academic Project Badge */}
-        <div className="flex items-center gap-3">
-          <div className="flex items-center gap-2 px-2.5 py-1 rounded-md bg-[#151B23] border border-[#212833]">
+        <div className="flex min-w-0 shrink-0 items-center gap-2 sm:gap-3">
+          <div className="flex min-w-0 items-center gap-2 px-2.5 py-1 rounded-md bg-[#151B23] border border-[#212833]">
             <Building2 className="w-3.5 h-3.5 text-[#D4AF37]" />
             <span className="text-xs font-semibold text-[#F5F7FA] tracking-tight">
-              Apex Global
+              HRVISTA
             </span>
-            <span className="text-[10px] font-mono text-[#98A2B3] border-l border-[#212833] pl-2 hidden sm:inline">
-              Enterprise v4.2
+            <span className="text-[10px] font-mono text-[#98A2B3] border-l border-[#212833] pl-2 hidden xl:inline">
+              Smart HR platform
             </span>
           </div>
 
           <button
             onClick={() => setActiveTab('impact')}
-            className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium text-[#E8C96A] bg-[#D4AF37]/10 hover:bg-[#D4AF37]/15 rounded-md border border-[#D4AF37]/25 transition-colors cursor-pointer"
+            className="hidden xl:flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-medium text-[#E8C96A] bg-[#D4AF37]/10 hover:bg-[#D4AF37]/15 rounded-md border border-[#D4AF37]/25 transition-colors cursor-pointer"
           >
             <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37] animate-pulse" />
-            <span>GE3791 Principles of Management</span>
+            <span>Principles of Management Mini Project</span>
           </button>
         </div>
 
         {/* Center Zone: Global Search & Cmd+K Shortcut */}
-        <div className="flex-1 max-w-md mx-4 hidden md:block">
+        <div className="min-w-0 flex-1 mx-1 sm:mx-2 lg:mx-4 hidden md:block">
           <button
             onClick={() => setIsCommandPaletteOpen(true)}
             className="w-full flex items-center justify-between px-3 py-1.5 text-xs text-[#98A2B3] bg-[#151B23] hover:bg-[#1A222C] border border-[#212833] rounded-lg transition-colors cursor-pointer group"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex min-w-0 items-center gap-2">
               <Search className="w-3.5 h-3.5 text-[#98A2B3] group-hover:text-[#D4AF37] transition-colors" />
-              <span>Search employees, roles, records...</span>
+              <span className="truncate">Search employees, roles, records...</span>
             </div>
             <kbd className="px-1.5 py-0.5 text-[10px] font-mono font-medium text-[#98A2B3] bg-[#11161D] border border-[#212833] rounded">
               ⌘K
@@ -100,7 +100,7 @@ export const Header: React.FC<HeaderProps> = () => {
         </div>
 
         {/* Right Zone: Controls, Notifications, Role Switcher, Profile */}
-        <div className="flex items-center gap-2 sm:gap-2.5">
+        <div className="flex shrink-0 items-center gap-1 sm:gap-2.5">
           {/* Mobile search trigger */}
           <button
             onClick={() => setIsCommandPaletteOpen(true)}
@@ -241,8 +241,8 @@ export const Header: React.FC<HeaderProps> = () => {
           {/* Academic Help modal button */}
           <button
             onClick={() => setShowHelpModal(true)}
-            className="p-2 text-[#98A2B3] hover:text-[#F5F7FA] hover:bg-[#151B23] rounded-lg transition-colors cursor-pointer"
-            title="Principles of Management (GE3791) Academic Overview"
+            className="hidden xl:inline-flex p-2 text-[#98A2B3] hover:text-[#F5F7FA] hover:bg-[#151B23] rounded-lg transition-colors cursor-pointer"
+            title="Principles of Management Academic Overview"
           >
             <HelpCircle className="w-4 h-4" />
           </button>
@@ -250,7 +250,7 @@ export const Header: React.FC<HeaderProps> = () => {
           {/* Reset Demo Data button */}
           <button
             onClick={() => setShowResetConfirm(true)}
-            className="p-2 text-[#98A2B3] hover:text-[#D4AF37] hover:bg-[#151B23] rounded-lg transition-colors cursor-pointer"
+            className="hidden xl:inline-flex p-2 text-[#98A2B3] hover:text-[#D4AF37] hover:bg-[#151B23] rounded-lg transition-colors cursor-pointer"
             title="Reset to default mock dataset"
           >
             <RotateCcw className="w-4 h-4" />
@@ -295,7 +295,7 @@ export const Header: React.FC<HeaderProps> = () => {
             <div className="flex items-start justify-between pb-3 border-b border-[#212833] mb-4">
               <div>
                 <span className="text-[10px] font-mono text-[#E8C96A] tracking-wider uppercase">
-                  Regulation 2021 / Syllabus GE3791
+                  Regulation 2021 / Academic Overview
                 </span>
                 <h3 className="text-base font-bold text-[#F5F7FA] mt-0.5">
                   Principles of Management — College Mini Project

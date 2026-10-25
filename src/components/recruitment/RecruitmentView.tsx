@@ -91,7 +91,7 @@ export const RecruitmentView: React.FC = () => {
     resumeSummary: '',
     skills: ['TypeScript', 'Cloud Systems'],
     rating: 4,
-    notes: 'Candidate registered through NEXORA Careers Portal.'
+    notes: 'Candidate registered through HRVISTA Careers Portal.'
   });
 
   // Filtered applicants

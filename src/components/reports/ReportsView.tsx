@@ -109,7 +109,7 @@ export const ReportsView: React.FC = () => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.setAttribute('href', url);
-    link.setAttribute('download', `NEXORA_HR_${activeReport.toUpperCase()}_REPORT_${new Date().toISOString().split('T')[0]}.csv`);
+    link.setAttribute('download', `HRVISTA_${activeReport.toUpperCase()}_REPORT_${new Date().toISOString().split('T')[0]}.csv`);
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
@@ -200,7 +200,7 @@ export const ReportsView: React.FC = () => {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-4 border-b border-[#212833]">
           <div>
             <div className="text-[10px] uppercase font-mono text-[#D4AF37] tracking-widest">
-              NEXORA Enterprise Platform · Executive Extract
+              HRVISTA Platform · Executive Extract
             </div>
             <h2 className="text-base font-bold text-[#F5F7FA] mt-0.5">{currentDef.title}</h2>
             <p className="text-xs text-[#98A2B3]">{currentDef.description}</p>
@@ -352,8 +352,8 @@ export const ReportsView: React.FC = () => {
 
         {/* Footer Seal */}
         <div className="pt-3 border-t border-[#212833] flex items-center justify-between text-[11px] text-[#98A2B3] font-mono">
-          <span>Digital Seal: NEXORA-SHA256-AUTHENTICATED</span>
-          <span>GE3791 Principles of Management · Regulation 2021</span>
+          <span>Digital Seal: HRVISTA-SHA256-AUTHENTICATED</span>
+          <span>Principles of Management · Regulation 2021</span>
         </div>
       </div>
     </div>

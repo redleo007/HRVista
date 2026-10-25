@@ -134,22 +134,20 @@ export const TechImpactView: React.FC = () => {
   return (
     <div className="space-y-6">
       {/* Executive Academic Banner */}
-      <div className="bg-[#151B23] rounded-xl p-6 text-[#F5F7FA] border border-[#212833] shadow-md relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-96 h-96 bg-[#D4AF37]/5 rounded-full blur-3xl pointer-events-none" />
-
-        <div className="relative z-10">
+      <div className="bg-white rounded-xl p-6 text-[#F5F7FA] border border-slate-200 border-l-4 border-l-violet-700 shadow-sm">
+        <div>
           <div className="flex items-center gap-2 text-xs font-semibold text-[#E8C96A] mb-1 font-mono">
             <span className="px-2.5 py-0.5 rounded bg-[#D4AF37]/10 border border-[#D4AF37]/30">
-              GE3791 / Regulation 2021
+              Regulation 2021 / Mini Project
             </span>
             <span>Anna University Principles of Management Mini Project</span>
           </div>
 
-          <h1 className="text-xl sm:text-2xl font-bold tracking-tight text-[#F5F7FA] mt-1">
+          <h1 className="text-2xl sm:text-3xl font-bold tracking-tight text-[#172554] mt-1">
             Impact of Technology on Human Resource Management
           </h1>
 
-          <p className="text-xs text-[#98A2B3] mt-2 max-w-3xl leading-relaxed">
+          <p className="text-sm text-slate-600 mt-2 max-w-3xl leading-6">
             This module provides the core empirical research demonstration for the course project. 
             It analyzes the transition from bureaucratic, paper-centric personnel management into a modern, 
             data-driven, strategic Human Resource Information System (HRIS).
@@ -160,10 +158,10 @@ export const TechImpactView: React.FC = () => {
       {/* 6 Core Transformations: Process Flow Cards */}
       <div className="bg-[#151B23] rounded-xl border border-[#212833] p-5 shadow-sm space-y-4">
         <div>
-          <h2 className="text-sm font-bold text-[#F5F7FA] uppercase tracking-wider font-mono">
+          <h2 className="text-xl font-semibold text-[#172554]">
             Traditional HR Process → Digital HR Process
           </h2>
-          <p className="text-xs text-[#98A2B3] mt-0.5">
+          <p className="text-sm text-slate-500 mt-1">
             Key operational shifts mandated by the Principles of Management syllabus
           </p>
         </div>
@@ -367,7 +365,7 @@ export const TechImpactView: React.FC = () => {
             8 Core Organizational Benefits of HR Digitization
           </h2>
           <p className="text-xs text-[#98A2B3] mt-0.5">
-            Key theoretical advantages outlined in the GE3791 Principles of Management curriculum
+            Key theoretical advantages outlined in the Principles of Management curriculum
           </p>
         </div>
 

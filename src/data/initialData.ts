@@ -882,7 +882,7 @@ export interface TechImpactItem {
   timeReduction: string;
   costEfficiency: string;
   accuracyGain: string;
-  managementPrinciple: string; // GE3791 syllabus principle (e.g. Planning, Organizing, Staffing, Directing, Controlling)
+  managementPrinciple: string; // Syllabus principle (e.g. Planning, Organizing, Staffing, Directing, Controlling)
 }
 
 export const TECH_IMPACT_COMPARISONS: TechImpactItem[] = [

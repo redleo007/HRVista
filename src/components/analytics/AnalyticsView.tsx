@@ -176,7 +176,7 @@ export const AnalyticsView: React.FC = () => {
             <div className="flex items-center gap-3 text-xs font-mono">
               <span className="flex items-center gap-1 text-[#D4AF37]">
                 <span className="w-2 h-2 rounded-full bg-[#D4AF37]" />
-                <span>NEXORA</span>
+                <span>HRVISTA</span>
               </span>
               <span className="flex items-center gap-1 text-[#98A2B3]">
                 <span className="w-2 h-2 rounded-full bg-[#98A2B3]" />
@@ -199,7 +199,7 @@ export const AnalyticsView: React.FC = () => {
                     color: '#F5F7FA'
                   }}
                 />
-                <Line type="monotone" dataKey="retentionRate" stroke="#D4AF37" strokeWidth={2.5} dot={{ r: 4, fill: '#D4AF37' }} name="NEXORA Retention" />
+                <Line type="monotone" dataKey="retentionRate" stroke="#D4AF37" strokeWidth={2.5} dot={{ r: 4, fill: '#D4AF37' }} name="HRVISTA Retention" />
                 <Line type="monotone" dataKey="industryAvg" stroke="#98A2B3" strokeWidth={1.5} strokeDasharray="3 3" dot={false} name="Industry Baseline" />
               </LineChart>
             </ResponsiveContainer>

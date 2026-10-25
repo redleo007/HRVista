@@ -51,7 +51,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
     { id: 'training', label: 'Training & Skill Development (LMS)', icon: GraduationCap, category: 'Navigation' },
     { id: 'feedback', label: 'Employee Feedback & Morale', icon: MessageSquareHeart, category: 'Navigation' },
     { id: 'analytics', label: 'Executive Workforce Analytics', icon: BarChart3, category: 'Navigation' },
-    { id: 'impact', label: 'Technology Impact on HRM (GE3791)', icon: Cpu, category: 'Academic Research' },
+    { id: 'impact', label: 'Technology Impact on HRM', icon: Cpu, category: 'Academic Research' },
     { id: 'reports', label: 'Report Generation & Data Export', icon: FileSpreadsheet, category: 'Navigation' },
     { id: 'settings', label: 'Organization & Role Settings', icon: Settings, category: 'Settings' }
   ];
@@ -163,7 +163,7 @@ export const CommandPalette: React.FC<CommandPaletteProps> = ({ isOpen, onClose 
         {/* Footer shortcuts */}
         <div className="px-3.5 py-2 border-t border-[#212833] bg-[#11161D] flex items-center justify-between text-[10px] text-[#98A2B3] font-mono">
           <span>Navigate with mouse or search</span>
-          <span>NEXORA HR Platform</span>
+          <span>HRVISTA Platform</span>
         </div>
       </div>
     </div>
