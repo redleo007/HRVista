@@ -1,0 +1,6 @@
+{
+  "name": "Smart HR Management System",
+  "description": "Smart HR Management System demonstrating the Impact of Technology on Human Resource Management (GE3791 Principles of Management).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
